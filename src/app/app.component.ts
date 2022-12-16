@@ -8,13 +8,11 @@ import { RestApiServices } from './restapiservice.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  data: any;
   constructor(private apicall: RestApiServices) {
-    this.apicall.getRestApi().subscribe((data) => {
+    this.apicall.getAllCourses().subscribe((data) => {
       console.log(data);
-      alert(data);
-      if (document.getElementById('data') != null) {
-        document.getElementById('data').innerHTML = data;
-      }
+      data = data;
     });
   }
 }
