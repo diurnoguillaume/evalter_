@@ -12,7 +12,7 @@ export class AppComponent {
   constructor(private apicall: RestApiServices) {
     this.apicall.getAllCourses().subscribe((data) => {
       console.log(data);
-      data = data;
+      //data = data;
     });
   }
 }

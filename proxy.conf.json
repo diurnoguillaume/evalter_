@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "http://localhost/webservice/rest/server.php",
+    "secure": false
+  }
+}

@@ -18,7 +18,10 @@ export class RestApiServices {
     courseid: '4',
   });
   header = {
-    'Content-Type': 'application/json',
+    'Content-Type': 'multipart/form-data',
+    'Access-Control-Allow-Origin':
+      'http://localhost/webservice/rest/server.php',
+    Accept: '/',
     Host: 'localhost',
     'Content-Length': '406',
   };
