@@ -1,20 +1,15 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class RESTAPIService {
-  
-  constructor(private http: HttpClient) { }
+export class RestApiServices {
+  url = 'http://localhost/webservice/rest/server.php';
 
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  };
-  
-  postBlog(blog: any) {
-    let url = "http://localhost/webservice/rest/server.php";
-    return this.http.post(url, blog, this.httpOptions);
+  constructor(private http: HttpClient) {}
+
+  getRestApi() {
+    return this.http.get(this.url);
   }
+}
